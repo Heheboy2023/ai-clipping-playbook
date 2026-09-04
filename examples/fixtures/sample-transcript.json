@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "language": "en",
+  "duration": 7.8,
+  "segments": [
+    {"id": "SEG-001", "start": 0.0, "end": 2.5, "speaker": "Host", "text": "Welcome to the synthetic clipping fixture."},
+    {"id": "SEG-002", "start": 2.5, "end": 5.2, "speaker": "Guest", "text": "This caption exists to test timing and rendering."},
+    {"id": "SEG-003", "start": 5.2, "end": 7.8, "speaker": "Host", "text": "A human must still review every real clip."}
+  ]
+}

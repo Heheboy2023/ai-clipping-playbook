@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "project_id": "replace-me",
+  "candidate_id": "C-001",
+  "source_id": "SRC-001",
+  "output": "delivery/replace-me_C-001_v01.mp4",
+  "frame_size": "1080x1920",
+  "captions": "burned",
+  "audio_reviewed": false,
+  "full_playback_reviewed": false,
+  "rights_confirmed": false,
+  "reviewer": "",
+  "notes": ""
+}

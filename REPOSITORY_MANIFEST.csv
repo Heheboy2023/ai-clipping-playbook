@@ -1,0 +1,269 @@
+path,chapters,purpose,status
+.claude/settings.json,21–24,Agent instruction and permission contract,implemented
+.codex/skills/clipkit/SKILL.md,21; Appendix D,Repository support file,implemented
+.env.example,21; Appendix D,"Installation, configuration, or reproducibility control",implemented
+.gitignore,21; Appendix D,"Installation, configuration, or reproducibility control",implemented
+AGENTS.md,21–24,Agent instruction and permission contract,implemented
+CHANGELOG.md,Front matter; 21; Appendix D,"Repository orientation, license, or security policy",implemented
+CLAUDE.md,21–24,Agent instruction and permission contract,implemented
+LICENSE,Front matter; 21; Appendix D,"Repository orientation, license, or security policy",implemented
+LOCAL_RELEASE_MANIFEST.md,Appendix D; Appendix E,Local verification and release-state record,implemented
+Makefile,21; Appendix D,"Installation, configuration, or reproducibility control",implemented
+README.md,Front matter; 21; Appendix D,"Repository orientation, license, or security policy",implemented
+REPOSITORY_MANIFEST.csv,21; Appendix D,Generated repository-to-chapter map,implemented
+SECURITY.md,Front matter; 21; Appendix D,"Repository orientation, license, or security policy",implemented
+clipkit.example.toml,21; Appendix D,"Installation, configuration, or reproducibility control",implemented
+docs/authorized-downloads.md,3; 5; 20,Permission-aware yt-dlp guidance,documented
+docs/beginner-walkthrough.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/business-model-responsibilities.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/case-study-evidence-rules.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/claude-code-workflow.md,23; 24,Claude Code workflow documentation,documented
+docs/clipping-ecosystem.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/codex-workflow.md,22; 24,Codex workflow documentation,documented
+docs/commands.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/configuration.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/data-contracts.md,21; 24,Pipeline and data contract documentation,documented
+docs/examples.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/ffmpeg-commands.md,19–20,"FFmpeg installation, commands, and verification",documented
+docs/ffmpeg.md,19–20,"FFmpeg installation, commands, and verification",documented
+docs/file-organization.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/folder-structure.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/installation.md,21; Appendix D,Installation guidance,documented
+docs/macos-install.md,21; Appendix D,Installation guidance,documented
+docs/niche-risk-notes.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/output-naming.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/pipeline.md,21; 24,Pipeline and data contract documentation,documented
+docs/publishing-boundary.md,25,Local-only packaging boundary,documented
+docs/releases.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/required-software.md,21; Appendix D,Installation guidance,documented
+docs/security.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/speaker-detection.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/transcription.md,10; 17,Transcription setup and verification,documented
+docs/troubleshooting.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/update-policy.md,Appendix E,Book and repository synchronization policy,documented
+docs/volatile-platform-facts.md,3; 19–25; Appendix D,Operational documentation,documented
+docs/windows-install.md,21; Appendix D,Installation guidance,documented
+docs/yt-dlp.md,3; 5; 20,Permission-aware yt-dlp guidance,documented
+examples/agent-task-claude/README.md,3–25,Reusable example or expected output,implemented
+examples/agent-task-codex/README.md,3–25,Reusable example or expected output,implemented
+examples/ai-benchmark/README.md,3–25,Reusable example or expected output,implemented
+examples/ai-benchmark/acceptance-criteria.yaml,3–25,Reusable example or expected output,implemented
+examples/ai-benchmark/expected-review.csv,3–25,Reusable example or expected output,implemented
+examples/analytics-synthetic/README.md,3–25,Reusable example or expected output,implemented
+examples/audio-podcast/README.md,3–25,Reusable example or expected output,implemented
+examples/batch-fixtures/README.md,3–25,Reusable example or expected output,implemented
+examples/batch-fixtures/five-item-repaired.csv,3–25,Reusable example or expected output,implemented
+examples/batch-fixtures/five-item-with-failure.csv,3–25,Reusable example or expected output,implemented
+examples/batch-production/README.md,20; 24,Batch production example,implemented
+examples/batch-production/manifest.csv,20; 24,Batch production example,implemented
+examples/brand-system/README.md,3–25,Reusable example or expected output,implemented
+examples/case-studies/claim-audit-example.md,3–25,Reusable example or expected output,implemented
+examples/case-studies/redacted-example.md,3–25,Reusable example or expected output,implemented
+examples/clip-structure/three-versions.md,3–25,Reusable example or expected output,implemented
+examples/editorial-rubric/interview-transcript.txt,3–25,Reusable example or expected output,implemented
+examples/editorial-rubric/scored-candidates.csv,3–25,Reusable example or expected output,implemented
+examples/end-to-end/README.md,24–25,Complete local pipeline example,implemented
+examples/end-to-end/job.yaml,24–25,Complete local pipeline example,implemented
+examples/fixtures/README.md,3–5; 10; 15–25,Rights-safe generated test fixture,implemented
+examples/fixtures/fixture-manifest.json,3–5; 10; 15–25,Rights-safe generated test fixture,implemented
+examples/fixtures/sample-audio.wav,3–5; 10; 15–25,Rights-safe generated test fixture,generated fixture
+examples/fixtures/sample-candidates.csv,3–5; 10; 15–25,Rights-safe generated test fixture,implemented
+examples/fixtures/sample-gaming.mp4,3–5; 10; 15–25,Rights-safe generated test fixture,generated fixture
+examples/fixtures/sample-livestream.mp4,3–5; 10; 15–25,Rights-safe generated test fixture,generated fixture
+examples/fixtures/sample-multispeaker.mp4,3–5; 10; 15–25,Rights-safe generated test fixture,generated fixture
+examples/fixtures/sample-podcast.mp4,3–5; 10; 15–25,Rights-safe generated test fixture,generated fixture
+examples/fixtures/sample-segments.json,3–5; 10; 15–25,Rights-safe generated test fixture,implemented
+examples/fixtures/sample-transcript.json,3–5; 10; 15–25,Rights-safe generated test fixture,implemented
+examples/fixtures/sample-youtube.mp4,3–5; 10; 15–25,Rights-safe generated test fixture,generated fixture
+examples/fixtures/sample.srt,3–5; 10; 15–25,Rights-safe generated test fixture,implemented
+examples/gaming/README.md,5; 9; 14; 19–25,Gaming clipping example,implemented
+examples/gaming/job.yaml,5; 9; 14; 19–25,Gaming clipping example,implemented
+examples/livestream/README.md,5; 9–25,Livestream clipping example,implemented
+examples/livestream/job.yaml,5; 9–25,Livestream clipping example,implemented
+examples/media-fixtures/README.md,3–25,Reusable example or expected output,implemented
+examples/multi-speaker-podcast/README.md,4; 10; 14–25,Multi-speaker podcast example,implemented
+examples/multi-speaker-podcast/job.yaml,4; 10; 14–25,Multi-speaker podcast example,implemented
+examples/podcast-multitrack/README.md,3–25,Reusable example or expected output,implemented
+examples/podcast/README.md,4; 9–25,Podcast clipping example,implemented
+examples/podcast/job.yaml,4; 9–25,Podcast clipping example,implemented
+examples/resolve-layouts/README.md,3–25,Reusable example or expected output,implemented
+examples/resolve-sample/README.md,3–25,Reusable example or expected output,implemented
+examples/resolve-sample/expected/manual-output-spec.md,3–25,Reusable example or expected output,implemented
+examples/resolve-sample/expected/rough-cut-spec.md,3–25,Reusable example or expected output,implemented
+examples/resolve-sample/paper-edit.md,3–25,Reusable example or expected output,implemented
+examples/sample-project/README.md,3–25,Reusable example or expected output,implemented
+examples/transcript-review/sample.srt,3–25,Reusable example or expected output,implemented
+examples/transcript-review/sample.vtt,3–25,Reusable example or expected output,implemented
+examples/transcript-review/segments.json,3–25,Reusable example or expected output,implemented
+examples/youtube-video/README.md,5; 9–25,Authorized/local YouTube-style example,implemented
+examples/youtube-video/job.yaml,5; 9–25,Authorized/local YouTube-style example,implemented
+prompts/ai-result-critic.md,9–11; 17–18,"Transcript, moment, caption, or review prompt",documented
+prompts/candidate-analysis.md,9–11; 17–18,"Transcript, moment, caption, or review prompt",documented
+prompts/caption-cleanup.md,9–11; 17–18,"Transcript, moment, caption, or review prompt",documented
+prompts/claude/task-contract.md,23; 24,Claude Code workflow prompt,documented
+prompts/claude/verification-report.md,23; 24,Claude Code workflow prompt,documented
+prompts/codex/task-contract.md,22; 24,Codex workflow prompt,documented
+prompts/codex/verification-report.md,22; 24,Codex workflow prompt,documented
+prompts/context-critic.md,9–11; 17–18,"Transcript, moment, caption, or review prompt",documented
+prompts/transcript-analysis.md,9–11; 17–18,"Transcript, moment, caption, or review prompt",documented
+prompts/viral-moment-scoring.md,9–11; 17–18,"Transcript, moment, caption, or review prompt",documented
+pyproject.toml,21; Appendix D,"Installation, configuration, or reproducibility control",implemented
+schemas/batch-manifest.schema.json,3; 9–10; 17–25,Machine-readable workflow contract,implemented
+schemas/candidate.schema.json,3; 9–10; 17–25,Machine-readable workflow contract,implemented
+schemas/job.schema.json,3; 9–10; 17–25,Machine-readable workflow contract,implemented
+schemas/media-probe.schema.json,3; 9–10; 17–25,Machine-readable workflow contract,implemented
+schemas/qc-result.schema.json,3; 9–10; 17–25,Machine-readable workflow contract,implemented
+schemas/render-manifest.schema.json,3; 9–10; 17–25,Machine-readable workflow contract,implemented
+schemas/source-manifest.schema.json,3; 9–10; 17–25,Machine-readable workflow contract,implemented
+schemas/transcript.schema.json,3; 9–10; 17–25,Machine-readable workflow contract,implemented
+scripts/build_repository_manifest.py,3; 19–24; Appendix D,"Fixture, manifest, or maintenance script",implemented
+scripts/clean_work.py,3; 19–24; Appendix D,"Fixture, manifest, or maintenance script",implemented
+scripts/clipkit/__init__.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/audio.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/audit_brand.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/batch.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/captions.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/compare_candidates.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/concat.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/cut.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/layout.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/package.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/probe.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/reframe.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/retrieve.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/transcribe.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/validate_package.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/validate_transcript.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/clipkit/vertical.py,17–25,Thin runnable chapter wrapper,implemented
+scripts/generate_fixtures.py,3; 19–24; Appendix D,"Fixture, manifest, or maintenance script",implemented
+scripts/hooks/validate_output_root.py,23–24,Agent output-root safety hook,implemented
+src/clipkit/__init__.py,21–25,Core Clipkit command infrastructure,implemented
+src/clipkit/__main__.py,21–25,Core Clipkit command infrastructure,implemented
+src/clipkit/batch.py,20; 24,Batch implementation,implemented
+src/clipkit/candidates.py,9; 17–18,Candidate validation and scoring implementation,implemented
+src/clipkit/captions.py,10; 15; 17; 20,Caption generation implementation,implemented
+src/clipkit/cli.py,21–25,Core Clipkit command infrastructure,implemented
+src/clipkit/doctor.py,21,Environment and configuration implementation,implemented
+src/clipkit/errors.py,21–25,Core Clipkit command infrastructure,implemented
+src/clipkit/io.py,21–25,Core Clipkit command infrastructure,implemented
+src/clipkit/media.py,15; 19–20; 22–24,FFmpeg-backed media implementation,implemented
+src/clipkit/operations.py,15; 19–20; 22–24,FFmpeg-backed media implementation,implemented
+src/clipkit/package.py,25–26,Local packaging and mechanical brand audit,implemented
+src/clipkit/pipeline.py,24,"Pipeline state, approval, and QC implementation",implemented
+src/clipkit/process.py,21–25,Core Clipkit command infrastructure,implemented
+src/clipkit/project.py,3,Project intake and file organization implementation,implemented
+src/clipkit/qc.py,24,"Pipeline state, approval, and QC implementation",implemented
+src/clipkit/render.py,15; 19–20; 22–24,FFmpeg-backed media implementation,implemented
+src/clipkit/retrieve.py,3; 5; 20,Sanitized metadata retrieval implementation,implemented
+src/clipkit/settings.py,21,Environment and configuration implementation,implemented
+src/clipkit/subtitle_raster.py,21–25,Core Clipkit command infrastructure,implemented
+src/clipkit/transcript.py,10; 17,Transcription implementation,implemented
+templates/agent-run-manifest.yaml,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/ai-correction-log.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/ai-cost-recheck.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/ai-output-review.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/ai-release-checklist.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/ai-tool-scorecard.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/audience-brief.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/audio-only-visual-plan.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/audio-qc.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/automation-labor-audit.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/batch-manifest.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/brand-kit.yaml,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/business-case-transfer.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/business/agency-raci.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/business/campaign-due-diligence.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/business/capacity-model.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/business/capacity-pricing.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/business/change-order.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/business/contingency-plan.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/business/disclosure-log.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/business/discovery-agenda.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/business/offboarding.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/business/offer-spec.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/business/proposal-sow.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/business/prospect-scorecard.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/business/retainer-spec.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/business/revenue-model-comparison.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/candidate-record.schema.json,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/candidate-slate.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/caption-qc.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/case-claim-audit.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/case-comparison.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/case-study-framework.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/claim-evidence-ladder.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/clip-beat-sheet.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/clip-experiment-log.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/command-planning.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/content-calendar.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/content-pillars.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/crop-shot-list.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/delivery-spec.yaml,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/destinations/generic-vertical.json,25,Destination packaging template,documented
+templates/disclosure-checklist.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/edit-decision-log.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/exception-log.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/experiment-backlog.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/export-manifest.json,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/failure-triage.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/final-playback-review.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/glossary.csv,Appendix C,Book and repository glossary data,documented
+templates/goal-metric-map.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/hook-integrity-check.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/human-approval.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/job.yaml,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/layout-review-checklist.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/listening-spot-check-plan.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/live-verification.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/metric-definition-sheet.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/moment-scorecard.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/niche-scorecard.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/niche-source-inventory.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/opportunity-path-scorecard.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/page-positioning-canvas.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/paper-edit.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/performance-postmortem.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/permission-record.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/platform-recheck-log.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/platform-source-matrix.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/podcast-intake-checklist.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/preflight-interpretation.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/printable-master-checklist.md,Appendix A,Printable end-to-end quality checklist,documented
+templates/publish-record.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/resolve/backup-checklist.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/resolve/bin-map.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/resolve/layout-presets-spec.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/resolve/project-settings.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/review-notes.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/rights-log.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/source-intake-manifest.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/source-rights-intake.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/speaker-map.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/speaker-roster.csv,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/transcript-review-checklist.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/vod-context-notes.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+templates/weekly-review.md,2–3; 9–10; 15; 18; 20–28,Reusable workflow or review template,documented
+tests/conftest.py,17–25,Automated verification,tested by suite
+tests/test_agent_change_contract.py,17–25,Automated verification,tested by suite
+tests/test_audio.py,17–25,Automated verification,tested by suite
+tests/test_batch.py,17–25,Automated verification,tested by suite
+tests/test_batch_resume.py,17–25,Automated verification,tested by suite
+tests/test_brand_audit.py,17–25,Automated verification,tested by suite
+tests/test_candidate_compare.py,17–25,Automated verification,tested by suite
+tests/test_candidates.py,17–25,Automated verification,tested by suite
+tests/test_captions.py,17–25,Automated verification,tested by suite
+tests/test_captions_and_transcript.py,17–25,Automated verification,tested by suite
+tests/test_cli.py,17–25,Automated verification,tested by suite
+tests/test_cut.py,17–25,Automated verification,tested by suite
+tests/test_ffmpeg_documented_patterns.py,17–25,Automated verification,tested by suite
+tests/test_hooks.py,17–25,Automated verification,tested by suite
+tests/test_io_and_project.py,17–25,Automated verification,tested by suite
+tests/test_media_commands.py,17–25,Automated verification,tested by suite
+tests/test_packages.py,17–25,Automated verification,tested by suite
+tests/test_pipeline_e2e.py,17–25,Automated verification,tested by suite
+tests/test_probe.py,17–25,Automated verification,tested by suite
+tests/test_reframe.py,17–25,Automated verification,tested by suite
+tests/test_repository_manifest.py,17–25,Automated verification,tested by suite
+tests/test_resume.py,17–25,Automated verification,tested by suite
+tests/test_transcript_pipeline.py,17–25,Automated verification,tested by suite
+uv.lock,21; Appendix D,"Installation, configuration, or reproducibility control",implemented

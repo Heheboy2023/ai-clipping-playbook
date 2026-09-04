@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Batch CSV row contract",
+  "description": "The CSV header requires job_id, operation, input, and output. Optional fields are start, end, duration, mode, width, height, captions, and stream_copy.",
+  "type": "object",
+  "required": ["job_id", "operation", "input", "output"]
+}

@@ -1,0 +1,2 @@
+candidate_id,tool,boundary_correct,context_preserved,captions_correct,crop_correct,human_decision,correction
+C-001,replace-me,false,false,false,false,reject,Complete from observed output

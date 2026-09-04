@@ -1,0 +1,2 @@
+platform,requirement,official_url,observed_value,checked_by,checked_at,applies_to_project,notes
+replace-me,upload-specification,,,,,false,Do not freeze volatile limits into automation

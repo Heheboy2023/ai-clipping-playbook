@@ -1,0 +1,2 @@
+candidate_id,start,end,summary,total_score,eligible,review_note
+C-001,2.5,8.0,Score limits and review requirement,39,true,Synthetic example; verify context

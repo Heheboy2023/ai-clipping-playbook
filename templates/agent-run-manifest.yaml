@@ -1,0 +1,21 @@
+schema_version: 1
+task_id: replace-me
+agent: codex-or-claude-code
+scope:
+  allowed_paths:
+    - src/clipkit
+    - tests
+  prohibited_actions:
+    - publish
+    - upload
+    - delete_source_media
+inputs:
+  fixture_only: true
+commands_to_verify:
+  - python -m pytest
+required_report:
+  - files_changed
+  - tests_run
+  - failures
+  - unresolved_risks
+human_approval_required: true

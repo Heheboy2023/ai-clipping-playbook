@@ -1,0 +1,4 @@
+beat,source_start,source_end,purpose,spoken_content,visual_plan,caption_emphasis,context_risk
+hook,0,3,earn attention,,,,
+setup,3,8,establish context,,,,
+payoff,8,20,deliver value,,,,

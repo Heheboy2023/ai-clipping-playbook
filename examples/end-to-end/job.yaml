@@ -1,0 +1,26 @@
+schema_version: 1
+project_id: end-to-end
+rights_confirmed: true
+editorial_approved: true
+work_root: ../../work/end-to-end
+steps:
+  - id: cut
+    operation: cut
+    input: ../fixtures/sample-podcast.mp4
+    output: ../../work/end-to-end/01-cut.mp4
+    options: {start: 0, duration: 6}
+  - id: vertical
+    operation: vertical
+    input: "@previous"
+    output: ../../work/end-to-end/02-vertical.mp4
+    options: {mode: crop}
+  - id: captions
+    operation: captions_burn
+    input: "@previous"
+    output: ../../work/end-to-end/03-captioned.mp4
+    options: {captions: ../fixtures/sample.srt}
+  - id: audio
+    operation: audio_normalize
+    input: "@previous"
+    output: ../../work/end-to-end/04-final.mp4
+    options: {}

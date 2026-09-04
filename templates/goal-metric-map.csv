@@ -1,0 +1,2 @@
+business_goal,viewer_action,leading_metric,lagging_metric,measurement_limit,decision_rule
+awareness,qualified-view,hold_and_completion,qualified_reach,Views do not prove intent,Review alongside comments and source context

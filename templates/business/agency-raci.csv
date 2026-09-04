@@ -1,0 +1,3 @@
+activity,responsible,accountable,consulted,informed,evidence_or_handoff
+rights-intake,producer,account-lead,client,editor,rights-log.csv
+final-playback,editor,creative-lead,client,producer,final-playback-review.md

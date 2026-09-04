@@ -1,0 +1,2 @@
+job_id,operation,input,output,start,duration,mode,captions,status
+JOB-001,cut,examples/fixtures/sample-podcast.mp4,work/batch/JOB-001.mp4,0,4,,,pending

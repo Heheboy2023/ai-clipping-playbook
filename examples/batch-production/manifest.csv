@@ -1,0 +1,4 @@
+job_id,operation,input,output,start,duration,mode,captions
+BATCH-001,cut,../fixtures/sample-podcast.mp4,../../work/batch-production/podcast-cut.mp4,0,4,,
+BATCH-002,vertical,../fixtures/sample-gaming.mp4,../../work/batch-production/gaming-vertical.mp4,,,pad,
+BATCH-003,audio_normalize,../fixtures/sample-audio.wav,../../work/batch-production/audio-normalized.wav,,,,

@@ -1,0 +1,10 @@
+schema_version: 1
+rights_confirmed: false
+required:
+  exact_source_boundaries: true
+  context_preserved: true
+  transcript_verified: true
+  crop_reviewed: true
+  captions_reviewed: true
+  full_playback: true
+performance_prediction_allowed: false

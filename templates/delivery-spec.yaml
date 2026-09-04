@@ -1,0 +1,15 @@
+schema_version: 1
+project_id: replace-me
+destination: local-delivery-only
+container: mp4
+video:
+  width: 1080
+  height: 1920
+  codec: h264
+audio:
+  codec: aac
+captions:
+  mode: burned
+naming: "{project_id}_{candidate_id}_{version}.mp4"
+human_playback_required: true
+publishing_authority: false

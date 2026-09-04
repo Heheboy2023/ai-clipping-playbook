@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "bytes": 256078,
+      "path": "sample-audio.wav",
+      "provenance": "Generated locally from FFmpeg lavfi test sources; no third-party media.",
+      "sha256": "5d91a239bcdc333e8b78df081a13f82c9502e1752b9ee2bc610d81498b8ad403"
+    },
+    {
+      "bytes": 561,
+      "path": "sample-candidates.csv",
+      "provenance": "Generated locally from FFmpeg lavfi test sources; no third-party media.",
+      "sha256": "52693bc296b8b1526a4e743a74f2e20eb178451bb66010578964126fc207ffe2"
+    },
+    {
+      "bytes": 2597321,
+      "path": "sample-gaming.mp4",
+      "provenance": "Generated locally from FFmpeg lavfi test sources; no third-party media.",
+      "sha256": "b3392b06383cf13bc4ecbe7c00ad9ef48f164bafeb66cd5ca71d38106ffcd155"
+    },
+    {
+      "bytes": 110709,
+      "path": "sample-livestream.mp4",
+      "provenance": "Generated locally from FFmpeg lavfi test sources; no third-party media.",
+      "sha256": "e658f3a14049aa99f3d97847b82bc714d66e594fe1bc4cd9c930e23632f8a7e6"
+    },
+    {
+      "bytes": 858283,
+      "path": "sample-multispeaker.mp4",
+      "provenance": "Generated locally from FFmpeg lavfi test sources; no third-party media.",
+      "sha256": "93f84af10a509213905f052de3322575a0658e5922aae78a3bf00ffec3fa8297"
+    },
+    {
+      "bytes": 1050818,
+      "path": "sample-podcast.mp4",
+      "provenance": "Generated locally from FFmpeg lavfi test sources; no third-party media.",
+      "sha256": "69666b67e8be4d28890bebd161a1f6b568af1098ff44d84f3641a44077a80891"
+    },
+    {
+      "bytes": 371,
+      "path": "sample-segments.json",
+      "provenance": "Generated locally from FFmpeg lavfi test sources; no third-party media.",
+      "sha256": "574ce72d34b46f0e13364a9ebb67e476edc59430d1006f39a1f007637b1cff46"
+    },
+    {
+      "bytes": 459,
+      "path": "sample-transcript.json",
+      "provenance": "Generated locally from FFmpeg lavfi test sources; no third-party media.",
+      "sha256": "d537244b1da61d601e9bf26f1727ef5e99864bb191f1f297aef41ee9696506b7"
+    },
+    {
+      "bytes": 1517951,
+      "path": "sample-youtube.mp4",
+      "provenance": "Generated locally from FFmpeg lavfi test sources; no third-party media.",
+      "sha256": "d7f9506217468a6b3a1b5e6b918be679d9b807d6e01f5a9fb1731a3f84453100"
+    }
+  ],
+  "fixture_license": "MIT License; synthetic test material generated locally only.",
+  "schema_version": 1
+}

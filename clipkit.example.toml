@@ -1,0 +1,23 @@
+[paths]
+work_root = "work"
+ffmpeg = "ffmpeg"
+ffprobe = "ffprobe"
+yt_dlp = "yt-dlp"
+whisper = "whisper"
+
+[video]
+width = 1080
+height = 1920
+video_codec = "libx264"
+audio_codec = "aac"
+crf = 20
+preset = "medium"
+
+[audio]
+integrated_loudness = -16.0
+loudness_range = 11.0
+true_peak = -1.5
+
+[batch]
+jobs = 2
+

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Clipkit single render manifest",
+  "type": "object",
+  "required": ["operation", "input", "output"],
+  "properties": {
+    "operation": {"enum": ["cut", "vertical", "captions_burn", "audio_normalize"]},
+    "input": {"type": "string", "minLength": 1},
+    "output": {"type": "string", "minLength": 1},
+    "options": {"type": "object"}
+  },
+  "additionalProperties": false
+}
+

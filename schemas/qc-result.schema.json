@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Clipkit automated QC result",
+  "type": "object",
+  "required": ["automated_pass", "human_playback_review_required", "outputs"],
+  "properties": {
+    "automated_pass": {"type": "boolean"},
+    "human_playback_review_required": {"const": true},
+    "publishing_approved": {"const": false},
+    "outputs": {"type": "array", "minItems": 1}
+  }
+}
+

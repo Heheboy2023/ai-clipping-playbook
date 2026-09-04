@@ -1,0 +1,6 @@
+job_id,operation,input,output,start,duration,mode,captions
+CH20-001,cut,../fixtures/sample-podcast.mp4,../../work/ch20/batch/01-podcast-cut.mp4,0,4,,
+CH20-002,vertical,../fixtures/sample-gaming.mp4,../../work/ch20/batch/02-gaming-vertical.mp4,,,pad,
+CH20-003,audio_normalize,../fixtures/sample-audio.wav,../../work/ch20/batch/03-audio-normalized.wav,,,,
+CH20-004,captions_burn,../fixtures/sample-podcast.mp4,../../work/ch20/batch/04-captioned.mp4,,,,../fixtures/sample.srt
+CH20-005,vertical,../fixtures/sample-youtube.mp4,../../work/ch20/batch/05-youtube-vertical.mp4,,,crop,

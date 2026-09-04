@@ -1,0 +1,19 @@
+schema_version: 1
+project_id: replace-me
+rights_confirmed: false
+editorial_approved: false
+work_root: ../work/replace-me
+steps:
+  - id: cut
+    operation: cut
+    input: ../examples/fixtures/sample-podcast.mp4
+    output: ../work/replace-me/01-cut.mp4
+    options:
+      start: 0
+      duration: 5
+  - id: vertical
+    operation: vertical
+    input: "@previous"
+    output: ../work/replace-me/02-vertical.mp4
+    options:
+      mode: crop

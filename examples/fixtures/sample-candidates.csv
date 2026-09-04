@@ -1,0 +1,3 @@
+candidate_id,source_id,start,end,speaker,summary,transcript_excerpt,clarity,standalone_value,audience_fit,tension,emotion,surprise,utility,payoff,source_integrity,visual_viability,rights_clear,disqualifier,reviewer_notes
+C-001,FIX-PODCAST,0,5.2,Host and Guest,Synthetic fixture introduction,Welcome to the synthetic clipping fixture.,4,4,4,2,2,1,3,3,5,4,true,,Synthetic scoring example only
+C-002,FIX-PODCAST,2.5,7.8,Guest and Host,Human review reminder,This caption exists to test timing and rendering.,4,4,3,2,2,1,4,4,5,4,true,,Synthetic scoring example only

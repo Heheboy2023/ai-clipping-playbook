@@ -1,0 +1,16 @@
+schema_version: 1
+project_id: gaming-demo
+rights_confirmed: true
+editorial_approved: true
+work_root: ../../work/gaming-demo
+steps:
+  - id: cut
+    operation: cut
+    input: ../fixtures/sample-gaming.mp4
+    output: ../../work/gaming-demo/01-cut.mp4
+    options: {start: 1, duration: 5}
+  - id: vertical-pad
+    operation: vertical
+    input: "@previous"
+    output: ../../work/gaming-demo/02-final.mp4
+    options: {mode: pad}

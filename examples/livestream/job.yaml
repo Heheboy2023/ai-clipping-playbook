@@ -1,0 +1,16 @@
+schema_version: 1
+project_id: livestream-demo
+rights_confirmed: true
+editorial_approved: true
+work_root: ../../work/livestream-demo
+steps:
+  - id: cut
+    operation: cut
+    input: ../fixtures/sample-livestream.mp4
+    output: ../../work/livestream-demo/01-cut.mp4
+    options: {start: 0.5, duration: 5.5}
+  - id: vertical-pad
+    operation: vertical
+    input: "@previous"
+    output: ../../work/livestream-demo/02-final.mp4
+    options: {mode: pad}

@@ -1,0 +1,2 @@
+item_id,series,source_id,candidate_id,destination,target_window,owner,status,rights_checked,editorial_checked,package_id,notes
+ITEM-001,,SRC-001,C-001,,,editor,draft,false,false,,

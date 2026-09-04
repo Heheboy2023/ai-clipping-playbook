@@ -1,0 +1,2 @@
+platform,source_type,owner_or_account,authorized_access_method,metadata_available,caption_or_transcript_available,retention_risk,official_reference,recheck_date,notes
+local,creator-supplied-file,project-owner,filesystem,true,optional,low,,,Preferred stable source

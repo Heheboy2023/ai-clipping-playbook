@@ -1,0 +1,21 @@
+schema_version: 1
+project_id: multispeaker-demo
+rights_confirmed: true
+editorial_approved: true
+work_root: ../../work/multispeaker-demo
+steps:
+  - id: cut
+    operation: cut
+    input: ../fixtures/sample-multispeaker.mp4
+    output: ../../work/multispeaker-demo/01-cut.mp4
+    options: {start: 0, duration: 6}
+  - id: vertical-pad
+    operation: vertical
+    input: "@previous"
+    output: ../../work/multispeaker-demo/02-vertical.mp4
+    options: {mode: pad}
+  - id: captions
+    operation: captions_burn
+    input: "@previous"
+    output: ../../work/multispeaker-demo/03-final.mp4
+    options: {captions: ../fixtures/sample.srt}

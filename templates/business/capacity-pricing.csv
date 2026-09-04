@@ -1,0 +1,2 @@
+service,minutes_per_unit,units_per_week,direct_cost_per_unit,revision_reserve_hours,admin_hours,target_margin,quoted_price,notes
+vertical-clip,,,,,,,Do not infer a market rate,

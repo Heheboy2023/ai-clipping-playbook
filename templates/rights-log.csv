@@ -1,0 +1,2 @@
+source_id,rights_status,permission_scope,platforms_allowed,territories,term,credit_required,music_status,reviewer,evidence_location,decision_notes
+SRC-001,confirmed,testing-only,local-only,internal,project-duration,no,synthetic,editor,fixtures/manifest.json,Synthetic project fixture

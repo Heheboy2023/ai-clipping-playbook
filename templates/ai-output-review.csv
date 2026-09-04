@@ -1,0 +1,2 @@
+candidate_id,tool,source_start,source_end,context_preserved,hook_faithful,speaker_correct,crop_correct,captions_correct,audio_correct,decision,correction_notes
+C-001,,,0,0,false,false,false,false,false,false,reject,

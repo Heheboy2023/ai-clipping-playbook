@@ -1,0 +1,2 @@
+candidate_id,source_id,start,end,speaker,transcript_excerpt,why_it_might_work,missing_context,status
+C-001,SRC-001,0,30,Speaker 1,,,Needs review,draft

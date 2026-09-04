@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Clipkit source manifest",
+  "type": "object",
+  "required": ["schema_version", "authorization_confirmed", "stored_path", "sha256"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "authorization_confirmed": {"type": "boolean", "const": true},
+    "mode": {"enum": ["copy", "reference"]},
+    "stored_path": {"type": "string", "minLength": 1},
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  },
+  "additionalProperties": true
+}
+

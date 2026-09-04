@@ -1,0 +1,6 @@
+{
+  "segments": [
+    {"id": "TR-001", "start": 0.0, "end": 2.5, "speaker": "Host", "text": "Welcome to the transcript review fixture."},
+    {"id": "TR-002", "start": 2.5, "end": 5.0, "speaker": "Guest", "text": "Verify this text against the source audio."}
+  ]
+}

@@ -1,0 +1,14 @@
+schema_version: 1
+brand_name: replace-me
+voice:
+  attributes: []
+  avoid: []
+visual:
+  primary_color: "#000000"
+  accent_color: "#ffffff"
+  typeface: replace-with-licensed-font
+caption:
+  max_lines: 2
+  protected_zones: []
+naming: "{series}_{topic}_{candidate_id}_{version}"
+approval_owner: replace-me

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Clipkit pipeline job",
+  "type": "object",
+  "required": ["project_id", "rights_confirmed", "editorial_approved", "work_root", "steps"],
+  "properties": {
+    "project_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$"},
+    "rights_confirmed": {"type": "boolean"},
+    "editorial_approved": {"type": "boolean"},
+    "work_root": {"type": "string", "minLength": 1},
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "render-manifest.schema.json"}
+    }
+  }
+}
+

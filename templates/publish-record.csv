@@ -1,0 +1,2 @@
+package_id,destination,account,manual_operator,scheduled_or_published_at,public_url,platform_confirmation,disclosure_checked,notes
+PACKAGE-001,,,,,,,false,Complete only after a separate manual publishing decision

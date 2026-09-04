@@ -1,0 +1,2 @@
+permission_id,source_id,grantor,grantee,scope,platforms,term,credit,proof_location,status,notes
+PERM-001,SRC-001,,,,,,,pending,,Obtain and retain actual permission evidence

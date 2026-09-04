@@ -1,0 +1,21 @@
+schema_version: 1
+project_id: youtube-style-demo
+rights_confirmed: true
+editorial_approved: true
+work_root: ../../work/youtube-style-demo
+steps:
+  - id: cut
+    operation: cut
+    input: ../fixtures/sample-youtube.mp4
+    output: ../../work/youtube-style-demo/01-cut.mp4
+    options: {start: 1, duration: 5}
+  - id: vertical
+    operation: vertical
+    input: "@previous"
+    output: ../../work/youtube-style-demo/02-vertical.mp4
+    options: {mode: crop}
+  - id: captions
+    operation: captions_burn
+    input: "@previous"
+    output: ../../work/youtube-style-demo/03-final.mp4
+    options: {captions: ../fixtures/sample.srt}

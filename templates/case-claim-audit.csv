@@ -1,0 +1,2 @@
+claim_id,case_id,claim_text,source_id,source_type,confirmed_elsewhere,self_reported,conflict,manuscript_label,follow_up
+CLAIM-001,CASE-001,,,primary,false,false,,unconfirmed,

@@ -1,0 +1,8 @@
+1
+00:00:00,000 --> 00:00:02,500
+Host: Welcome to the transcript review fixture.
+
+2
+00:00:02,500 --> 00:00:05,000
+Guest: Verify this text against the source audio.
+

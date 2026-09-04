@@ -1,0 +1,2 @@
+source_id,project_id,original_name,stored_name,source_type,source_url_or_local_path,creator_or_owner,authorization_basis,date_received,sha256,notes
+SRC-001,demo-project,sample.mp4,sample.mp4,local_file,,fixture-generator,project-owned fixture,,GENERATE_WITH_CLIPKIT,Safe placeholder row

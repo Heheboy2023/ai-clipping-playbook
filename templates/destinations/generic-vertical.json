@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "destination": "recheck-before-use",
+  "frame_width": 1080,
+  "frame_height": 1920,
+  "container": "mp4",
+  "codec": "h264",
+  "safe_area_review_required": true,
+  "official_source_url": "",
+  "checked_by": "",
+  "notes": "Platform requirements change. Verify current official documentation before delivery."
+}

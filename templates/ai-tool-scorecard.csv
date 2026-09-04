@@ -1,0 +1,2 @@
+tool,task,source_duration,setup_minutes,processing_minutes,candidates_returned,usable_without_edits,boundary_accuracy,caption_accuracy,crop_accuracy,export_control,cost_observed,reviewer,notes
+replace-me,benchmark,,,,,0,0,0,0,,,editor,Recheck price and features from official source

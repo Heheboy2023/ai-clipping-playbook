@@ -1,0 +1,2 @@
+shot_id,start,end,speaker_or_subject,layout,crop_target,change_reason,review_status
+SHOT-001,0,5,Speaker 1,single,crop-center,,pending
