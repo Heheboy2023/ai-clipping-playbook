@@ -4,7 +4,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .errors import ClipkitError
-from .io import assert_within, load_data, write_json
+from .fingerprint import operation_fingerprint
+from .io import assert_within, load_data, sha256_file, write_json
 from .operations import resolve_relative, run_operation
 from .settings import Settings
 
@@ -44,6 +45,17 @@ def run_pipeline(
 
     base = manifest_path.parent
     work_root = resolve_relative(base, manifest.get("work_root", f"work/{project_id}"))
+    ids: set[str] = set()
+    outputs: set[Path] = set()
+    for index, step in enumerate(steps, start=1):
+        if not isinstance(step, dict) or not step.get("id") or not step.get("output"):
+            raise ClipkitError(f"Pipeline step {index} needs a unique id and output.")
+        step_id = str(step["id"]).strip()
+        target = assert_within(resolve_relative(base, step["output"]), work_root)
+        if not step_id or step_id in ids or target in outputs:
+            raise ClipkitError("Pipeline step IDs and output paths must be unique.")
+        ids.add(step_id)
+        outputs.add(target)
     state_path = work_root / "run-state.json"
     previous_state: dict = {}
     if resume and state_path.is_file():
@@ -76,14 +88,20 @@ def run_pipeline(
             raise ClipkitError(f"Pipeline step {step_id} is missing input.")
 
         prior_output = output_path
-        old = completed_by_id.get(step_id)
-        if resume and old and output_path.is_file():
-            results.append({**old, "status": "completed", "resumed": True})
-            continue
         try:
             options = dict(step.get("options") or {})
             if options.get("captions"):
                 options["captions"] = str(resolve_relative(base, options["captions"]))
+            fingerprint = operation_fingerprint({
+                "operation": operation, "input": str(input_path),
+                "output": str(output_path), "options": options,
+            }, settings)
+            old = completed_by_id.get(step_id)
+            if (resume and old and old.get("fingerprint") == fingerprint
+                    and output_path.is_file()
+                    and old.get("output_hash") == sha256_file(output_path)):
+                results.append({**old, "status": "completed", "resumed": True})
+                continue
             result = run_operation(
                 operation,
                 input_path=input_path,
@@ -102,6 +120,8 @@ def run_pipeline(
                     "output": str(output_path),
                     "status": "planned" if dry_run else "completed",
                     "result": result,
+                    "fingerprint": fingerprint,
+                    "output_hash": sha256_file(output_path) if not dry_run else None,
                 }
             )
         except ClipkitError as exc:
@@ -126,7 +146,7 @@ def run_pipeline(
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "status": "failed" if failed else ("planned" if dry_run else "awaiting_human_qc"),
         "steps": results,
-        "approvals": previous_state.get("approvals", []),
+        "approvals": [],
     }
     if not dry_run:
         work_root.mkdir(parents=True, exist_ok=True)
@@ -158,6 +178,24 @@ def approve_run(
         raise ClipkitError("Only the human-qc gate is supported.")
     if not reviewer.strip():
         raise ClipkitError("A reviewer name or role is required.")
+    steps = state.get("steps", [])
+    if state.get("status") == "failed" or not steps or any(
+        item.get("status") != "completed" for item in steps
+    ):
+        raise ClipkitError("Complete every pipeline step before recording playback review.")
+    hashes = {}
+    for item in steps:
+        output = Path(item["output"])
+        if not output.is_file() or sha256_file(output) != item.get("output_hash"):
+            raise ClipkitError("A run output is missing or changed; rerun and review it.")
+        hashes[str(output)] = item["output_hash"]
+    qc_path = state_path.parent / "qc-report.json"
+    qc = load_data(qc_path) if qc_path.is_file() else {}
+    if not qc.get("automated_pass") or qc.get("source_state") != str(state_path):
+        raise ClipkitError("Run clipkit qc successfully before recording playback review.")
+    checked = {item["path"]: item.get("sha256") for item in qc.get("outputs", [])}
+    if checked != hashes:
+        raise ClipkitError("QC describes different output bytes; run clipkit qc again.")
     approval = {
         "gate": gate,
         "decision": "approved",
@@ -165,6 +203,7 @@ def approve_run(
         "notes": notes.strip(),
         "recorded_at": datetime.now(timezone.utc).isoformat(),
         "publishing_authority": False,
+        "output_hashes": hashes,
     }
     approvals = [item for item in state.get("approvals", []) if item.get("gate") != gate]
     approvals.append(approval)

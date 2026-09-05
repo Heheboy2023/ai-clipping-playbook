@@ -1,51 +1,49 @@
 term,plain_language_definition,primary_chapters
-agent,"Software that can plan and use tools toward a bounded task; it still requires permissions, evidence, and review.",21-24
-aspect ratio,"The relationship between a frame's width and height.",14;19
-atomic output,"A file finalized only after a successful temporary render, reducing partial final files.",20;24
-authorization,"Recorded permission or authority for a particular action; access alone is not authorization.",2-5
-batch,"A group of independent jobs processed through one controlled run.",20;24
-burned-in captions,"Caption pixels rendered into the video image and not switchable by the viewer.",15;20
-candidate,"A proposed source interval that may become a clip after human review.",9;17
-codec,"A method used to encode or decode video or audio.",19
-confounder,"Another factor that could explain an observed result.",8;29
-container,"The file wrapper that holds video, audio, subtitles, and metadata.",19
-crop,"Removing parts of the source frame to fit a target composition.",14;19
-cutaway,"A shot inserted away from the primary view to clarify or support the moment.",13
-diarization,"Estimating which speech segments belong to different speakers; labels are not verified identities.",10
-disclosure,"A clear statement of a material commercial or other required relationship.",2;25;28
-downmix,"Combining multiple audio channels into fewer output channels.",15;20
-fixture,"Safe generated or licensed input used for repeatable tests.",16-24
-frame rate,"The number or rate of video frames over time.",12;19
-gross profit,"Revenue minus the direct costs included in a stated calculation; it is not net profit.",27;28
-hook,"The opening device that establishes a truthful reason to continue watching.",11
-idempotent,"Designed so a safe repeat run does not create uncontrolled duplicate effects.",20;24
-keyframe,"A video frame encoded as a self-contained reference point for surrounding frames.",19
-letterbox,"Unused frame area, commonly bars, created when aspect ratios differ.",14;19
-loudness normalization,"Measured audio gain processing toward a stated target; final listening remains required.",15;20
-manifest,"A structured record of inputs, outputs, settings, identifiers, or job instructions.",3;20-25
-material connection,"A relationship that may affect how an audience interprets an endorsement or recommendation.",25;28
-metadata,"Descriptive data about a source or file, separate from the media essence.",3;5
-model,"A trained AI system used for tasks such as transcription or analysis.",16-18
-net profit,"What remains after all applicable expenses and obligations in the accounting context.",27;28
-padding,"Adding background or empty frame area to fit a target aspect ratio without removing source pixels.",14;19
-paper edit,"A text-first plan for source order, boundaries, context, and hook before timeline work.",11
-pipeline,"A defined sequence of processing, review, state, and approval steps.",18;24
-proxy,"A lighter working copy used to improve editing performance while preserving the original.",12
-provenance,"The recorded origin, transformations, and authority associated with an asset.",2-3
-RACI,"A map of who is Responsible, Accountable, Consulted, and Informed for each activity.",28
-re-encode,"Decode and encode media again, allowing precise processing but changing the encoded stream.",19
-reframe,"Compose an existing source for a different output frame or aspect ratio.",14;19
-render,"Generate an output file from an edit, filter, or composition.",15;19-24
-retainer,"An agreement reserving bounded recurring service or capacity for a recurring fee.",28
-safe zone,"A region kept clear enough that important content survives overlays, controls, and layout variation.",14;15
-schema,"A machine-readable definition of required data structure and fields.",17;21
-service level,"A delivery standard whose timing and dependencies are defined.",28
-sidecar captions,"A separate caption file delivered beside video or audio.",10;15
-source of truth,"The authoritative record that other copies or outputs derive from.",3;21
-stream copy,"Copying encoded streams without re-encoding; fast but constrained by source/keyframe structure.",19
-transcript,"A text representation of speech; it may include timing and speaker labels but requires verification.",10
-utilization,"The share of available capacity committed to delivery under a stated calculation.",28
-variable frame rate,"Video whose frame timing is not constant across the file.",12;19
-version,"A distinct saved state of an edit, file, schema, prompt, or package.",3;13;21
-vertical video,"A portrait-oriented output; it does not prescribe one crop or platform.",14;19
-
+Aspect ratio,"the shape of the frame, such as tall 9:16.",Resource Pack
+Resolution,the number of pixels across and down.,Resource Pack
+Frame rate,pictures shown each second.,Resource Pack
+Timeline,the line of clips in your edit.,Resource Pack
+Playhead,the marker showing where you are.,Resource Pack
+Trim,change a clip's edge.,Resource Pack
+Ripple delete,remove a section and close its gap.,Resource Pack
+Punch-in,a tighter version of the same shot.,Resource Pack
+B-roll,supporting images or footage.,Resource Pack
+Transcript,speech written as text.,Resource Pack
+Caption,words shown with the video.,Resource Pack
+SRT,a text file with caption words and times.,Resource Pack
+Burned captions,captions made part of the picture.,Resource Pack
+Diarization,software guessing who spoke when.,Resource Pack
+Terminal,an app for typed instructions.,Resource Pack
+Command,one instruction.,Resource Pack
+Script,saved instructions.,Resource Pack
+Repository,a project folder with tracked files and changes.,Resource Pack
+GitHub,a service that hosts repositories.,Resource Pack
+Environment,a tool setup kept apart from other projects.,Resource Pack
+Container,a media wrapper such as MP4.,Resource Pack
+Codec,a method for compressing media.,Resource Pack
+Bitrate,data used each second.,Resource Pack
+Encode,create compressed media.,Resource Pack
+Proxy,a lighter editing copy.,Resource Pack
+Batch,several jobs run as a group.,Resource Pack
+Manifest,"a file listing a job's inputs, outputs, and settings.",Resource Pack
+FFmpeg,a command-line tool for changing video and audio.,Resource Pack
+ffprobe,a tool for reading media details.,Resource Pack
+yt-dlp,a command-line tool that can retrieve supported online media and metadata.,Resource Pack
+Codex,OpenAI's coding assistant.,Resource Pack
+Claude Code,Anthropic's coding assistant.,Resource Pack
+Keyframe in an edit,"a saved setting at one point in time, such as a Zoom value; another keyframe can make it change over time. A compressed video's keyframes are a different use of the same word.",Resource Pack
+Retention,how viewing continues through a clip.,Resource Pack
+Payoff,"the answer, reveal, or reaction that completes the setup.",Resource Pack
+Retainer,a repeat service sold for an agreed period.,Resource Pack
+Scope,what a price includes.,Resource Pack
+Revision,a change requested after review.,Resource Pack
+Revenue,money earned before costs.,Resource Pack
+Profit,what remains after the costs you count; always say which costs.,Resource Pack
+Pipeline,connected steps where one result becomes the next input.,Resource Pack
+Dry run,a preview that checks a plan without making the planned media outputs.,Resource Pack
+Offset,a fixed time shift.,Resource Pack
+Fixture,predictable practice input used to test a tool.,Resource Pack
+Slate,a short list of proposed clips.,Resource Pack
+Denominator,the total a rate divides by.,Resource Pack
+Collected revenue,"money actually received, which can differ from amounts invoiced.",Resource Pack
+Work in progress,work started but not yet finished.,Resource Pack

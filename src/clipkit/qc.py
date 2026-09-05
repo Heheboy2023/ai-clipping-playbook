@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .errors import ClipkitError
-from .io import load_data, write_json
+from .io import load_data, sha256_file, write_json
 from .media import probe_media
 from .settings import Settings
 
@@ -49,6 +49,7 @@ def qc_state(state_value: str | Path, settings: Settings) -> dict:
                     "duration": duration,
                     "has_video": has_video,
                     "has_audio": has_audio,
+                    "sha256": sha256_file(output),
                 }
             )
             record["checks"].extend(
@@ -69,7 +70,10 @@ def qc_state(state_value: str | Path, settings: Settings) -> dict:
         "schema_version": 1,
         "source_state": str(state_path),
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "automated_pass": all(item["pass"] for item in records),
+        "automated_pass": all(item["pass"] for item in records) and all(
+            item.get("status") in {"completed", "skipped_completed"}
+            for item in (data.get("steps") or data.get("jobs") or [])
+        ),
         "human_playback_review_required": True,
         "publishing_approved": False,
         "outputs": records,
@@ -77,4 +81,3 @@ def qc_state(state_value: str | Path, settings: Settings) -> dict:
     report_path = state_path.parent / "qc-report.json"
     write_json(report_path, report)
     return {"report": str(report_path), **report}
-

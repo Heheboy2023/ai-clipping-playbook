@@ -1,0 +1,9 @@
+action,macOS,Windows,scope
+Save project,Command+S,Control+S,Default DaVinci Resolve preset
+Undo,Command+Z,Control+Z,Default DaVinci Resolve preset
+Redo,Command+Shift+Z,Control+Shift+Z,Default DaVinci Resolve preset
+Selection tool,A,A,Edit timeline has focus
+Blade tool,B,B,Edit timeline has focus
+Split at playhead,Command+Backslash,Control+Backslash,Check selected clips and enabled tracks
+Mark In,I,I,Source viewer or timeline has focus
+Mark Out,O,O,Source viewer or timeline has focus

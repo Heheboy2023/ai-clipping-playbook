@@ -1,98 +1,141 @@
-# Complete beginner walkthrough
+# Make your first automated practice clip
 
-This walkthrough uses only synthetic media generated on your computer. It creates no account and publishes nothing.
+This route creates a short vertical file with captions and sound on your computer.
+No paid AI tool or API key is needed. The source is a moving pattern with tones:
+it tests the commands, not your editing taste. For a real first clip in Resolve,
+start with the [recording exercise](../examples/first-clip/README.md).
 
-## 1. Install and enter the environment
+## 1. Finish setup once
 
-Install Python, FFmpeg, and ffprobe using the platform guide. From the repository root:
+Use the [macOS guide](macos-install.md) or [Windows guide](windows-install.md).
+Open the repository's top folder in your terminal and activate its environment.
+You should be in the folder containing `README.md`, `pyproject.toml`, and `src/`.
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
 clipkit doctor
 ```
 
-On Windows PowerShell, use `py -3.11 -m venv .venv` and `.venv\Scripts\Activate.ps1`.
+Find `core_ready: true` in the report. If it is false, fix the missing Python,
+FFmpeg, or ffprobe setup before continuing. Optional transcription or account
+fields do not need to be enabled for this exercise.
 
-## 2. Generate safe practice media
+## 2. Generate the practice source
 
 ```bash
 python scripts/generate_fixtures.py
+```
+
+The fixture files appear in `examples/fixtures/`. Keep the extensions as written.
+
+```bash
 clipkit probe --input examples/fixtures/sample-podcast.mp4
 ```
 
-The fixture manifest records the generated files and hashes. A real project needs its own authorization evidence.
+Look for video, audio, and a duration close to eight seconds. It is a test pattern,
+not a podcast conversation despite the filename.
 
-## 3. Practice project intake
+## 3. Preview the four-step job
 
-```bash
-clipkit init work/walkthrough --name walkthrough
-clipkit intake --project work/walkthrough --input examples/fixtures/sample-podcast.mp4 --mode copy --confirmed-authorized
-```
-
-For a real source, stop until the owner, allowed uses, guest/music issues, credit, destinations, and proof are recorded.
-
-## 4. Validate transcript and candidates
-
-```bash
-clipkit validate-transcript --manifest examples/fixtures/sample-transcript.json
-clipkit candidates validate --input examples/fixtures/sample-candidates.csv
-clipkit candidates score --input examples/fixtures/sample-candidates.csv --output work/walkthrough/scored-candidates.csv
-```
-
-The score ranks supplied editorial criteria. It does not predict views or replace source playback.
-
-## 5. Rehearse the plan
+Open `examples/end-to-end/job.yaml` in a text editor. Its steps are cut, vertical,
+captions, and audio. Later steps use `@previous`, meaning the earlier result.
 
 ```bash
 clipkit run --manifest examples/end-to-end/job.yaml --dry-run
 ```
 
-Read every input, output, and FFmpeg argument before running it. The manifest is authorized only because it points to repository-generated fixtures.
+Read the source and output paths. The output folder is `work/end-to-end/`.
+The dry run does not create video. The sample's confirmation fields refer to
+the provided test source and selected interval; choose those fields deliberately
+when adapting the job to another source.
 
-## 6. Render the local example
+## 4. Render
 
 ```bash
 clipkit run --manifest examples/end-to-end/job.yaml
+```
+
+A successful chain finishes as `awaiting_human_qc`. Four videos should exist:
+
+```text
+work/end-to-end/
+  01-cut.mp4
+  02-vertical.mp4
+  03-captioned.mp4
+  04-final.mp4
+```
+
+If this folder already contains a completed unchanged run, use the resume route
+below. For changed settings, make a new work folder in a copied manifest.
+Keep your previous work.
+
+## 5. Check the files
+
+```bash
 clipkit status --run work/end-to-end/run-state.json
 clipkit qc --batch work/end-to-end/run-state.json
 ```
 
-The automated report checks file presence, readability, duration, and streams. It cannot judge a dishonest cut, wrong speaker, bad crop, typo, or unpleasant sound.
+`status` reads progress. `qc` checks the completed files and writes `qc-report.json`.
+Find `automated_pass: true`. This confirms basic file checks, not a good edit.
 
-## 7. Perform human QC
+Open `04-final.mp4` in a player. Watch the entire six-second clip. You should see
+the moving pattern in a tall frame with changing words, and hear the test tone.
+The supplied SRT is test text, not a transcription of that tone.
 
-Watch `work/end-to-end/01-cut.mp4` through `04-final.mp4`, compare them with the fixture source, and complete `templates/final-playback-review.md`. If a correction is needed, remove or rename only the affected generated output, correct the manifest or implementation, and rerun safely.
+If something is wrong, open the earlier files to find where it first appears.
+An error in `02-vertical.mp4` points toward framing, not the audio step.
 
-When the review passes:
+## 6. Record your playback check
+
+After you really watched the file:
 
 ```bash
 clipkit approve --run work/end-to-end/run-state.json --reviewer "your name" --notes "full playback complete"
 ```
 
-This is local QC approval, not permission to publish.
+Replace `your name` with your name or editor role. This saves a local review record
+tied to the checked output. It does not upload anything.
 
-## 8. Package and validate
+## 7. Make the delivery folder
 
 ```bash
 clipkit package --run work/end-to-end/run-state.json --destination generic-vertical --output work/end-to-end-package
 clipkit validate-package --path work/end-to-end-package
-clipkit audit-brand --package work/end-to-end-package
 ```
 
-The package contains the final local media and a hash manifest. A human must separately recheck the destination’s current requirements, account, metadata, disclosures, and upload.
+Open the MP4 inside `work/end-to-end-package/media/`. This is the packaged copy,
+separate from the working outputs. Validation checks its recorded file hash.
 
-## 9. Try the other workflows
+## When a step fails
+
+Read the first failed step and fix that exact problem. Missing captions need a
+correct caption path. A missing source needs the right source file. An existing
+output needs a new version folder, or resume when the job is unchanged.
 
 ```bash
-clipkit run --manifest examples/podcast/job.yaml --dry-run
-clipkit run --manifest examples/youtube-video/job.yaml --dry-run
-clipkit run --manifest examples/livestream/job.yaml --dry-run
-clipkit run --manifest examples/gaming/job.yaml --dry-run
-clipkit run --manifest examples/multi-speaker-podcast/job.yaml --dry-run
-clipkit batch --manifest examples/batch-production/manifest.csv --jobs 2 --dry-run
+clipkit run --manifest examples/end-to-end/job.yaml --resume
 ```
 
-Use [troubleshooting](troubleshooting.md) if a step fails. Do not add real secrets or source media to a commit.
+Resume reuses only matching completed work. A real run clears prior playback
+approval, so repeat QC and playback before making a new package.
+
+| Message or symptom | First check |
+|---|---|
+| Command not found | Active environment and installation |
+| Source missing | Fixture generation and current folder |
+| Output outside work root | Paths in the copied YAML |
+| Caption does not fit | Split long cues with correct new timings |
+| Captions appear late | Use captions timed to the actual cut |
+| Package refused | Completed run, current QC, playback record, unchanged files |
+
+## Use the skill on your own material
+
+Finish a clean short edit first. Choose a fresh job folder, reviewed captions, and
+the needed vertical layout. Test one output before processing a package.
+
+- [Three checked selections into cuts](../examples/agent-clip-plan/README.md)
+- [Exact chapter command sheets](book-commands/)
+- [Pipeline details](pipeline.md)
+- [Troubleshooting](troubleshooting.md)
+
+Keep private media and real secrets outside the tracked public pack.

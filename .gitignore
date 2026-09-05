@@ -17,4 +17,4 @@ examples/**/work/
 examples/**/output/
 examples/**/run-state.json
 examples/**/qc-report.json
-
+examples/**/.clipkit-batch-state.json

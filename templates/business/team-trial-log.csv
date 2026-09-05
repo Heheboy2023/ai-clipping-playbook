@@ -1,0 +1,3 @@
+trial_id,candidate,task,fee_usd,briefing_minutes,first_review_minutes,revision_review_minutes,closeout_minutes,blocking_issue,final_status,next_step
+PRACTICE-A,Fictional candidate A,Caption cleanup,40,20,25,20,10,Wrong meaning and missing SRT,example awaiting final decision,Check repaired version
+PRACTICE-B,Fictional candidate B,Caption cleanup,40,20,12,8,5,None after line-break repair,example suitable for small repeat task,Agree a bounded paid batch

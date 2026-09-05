@@ -1,0 +1,2 @@
+test_id,model,post_id,view_window,public_views,eligible_views,link_visits,initial_actions,reversed_actions,confirmed_actions,confirmed_amount,currency,received_amount,direct_costs,work_hours,unresolved_question
+TEST01,,,,,,,,,,,USD,,,,

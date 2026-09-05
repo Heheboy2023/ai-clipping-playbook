@@ -14,7 +14,8 @@ Safety behavior:
 - Every declared output must stay inside `work_root`.
 - Existing outputs are not overwritten.
 - A failure is recorded and returns exit code 3.
-- `--resume` skips completed steps only when their output still exists.
+- `--resume` skips only unchanged completed steps: operation, options, input bytes, captions, settings, and output bytes must match. Changed jobs need new output names or a fresh work folder; existing files are never silently replaced.
+- Every real run clears its earlier playback approval. Run QC and review again before packaging.
 - Dry runs write no state or media.
 
 After automated checks, perform full human playback and record local approval:
@@ -24,7 +25,7 @@ clipkit qc --batch work/end-to-end/run-state.json
 clipkit approve --run work/end-to-end/run-state.json --reviewer "your name" --notes "full playback complete"
 ```
 
-Packaging remains blocked until approval exists. Approval and packaging both record `publishing_authority: false`.
+Packaging requires a complete run and playback approval tied to the actual output bytes. `approve` first requires a passing, current QC report. A failed run or changed output cannot be packaged as reviewed. Approval and packaging both record `publishing_authority: false`.
 
 ```bash
 clipkit package --run work/end-to-end/run-state.json --destination generic-vertical --output work/end-to-end-package

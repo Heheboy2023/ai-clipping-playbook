@@ -1,0 +1,4 @@
+creator,batch_id,clips_requested,sources_ready,missing_item,missing_item_owner,edit_minutes,review_minutes,next_action,status
+Nova,NOVA-B,4,true,,,150,60,Make first style check,ready
+Mira,MIRA-B,3,true,Player name at 00:14,Mira,110,45,Ask for name and start known clips,partly_ready
+Reed,REED-B,2,false,Source file and selected match,Reed,70,35,Confirm slot after source arrives,waiting

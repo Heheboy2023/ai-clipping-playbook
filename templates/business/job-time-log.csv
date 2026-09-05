@@ -1,0 +1,7 @@
+job_id,clip_id,task,planned_minutes,actual_minutes,cause_of_difference,next_estimate_change
+JOB01,,source check,,,,
+JOB01,,moment search,,,,
+JOB01,C01,editing,,,,
+JOB01,C01,captions and framing,,,,
+JOB01,,playback and export,,,,
+JOB01,,feedback and delivery,,,,

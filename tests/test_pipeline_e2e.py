@@ -6,6 +6,7 @@ import pytest
 import yaml
 
 from clipkit.errors import ClipkitError
+from clipkit.io import load_data, write_json
 from clipkit.package import audit_brand, package_run, validate_package
 from clipkit.pipeline import approve_run, run_pipeline, run_status
 from clipkit.qc import qc_state
@@ -48,6 +49,51 @@ def test_complete_pipeline_qc_approval_and_package(fixtures_dir: Path, media_set
     assert package["publishing_authority"] is False
     assert validate_package(package["package"])["valid"] is True
     assert audit_brand(package["package"])["portable_names"] is True
+    Path(result["steps"][-1]["output"]).write_bytes(b"changed after playback")
+    with pytest.raises(ClipkitError, match="changed after review"):
+        package_run(state, "generic-vertical", tmp_path / "tampered-package", overwrite=False)
+
+
+@pytest.mark.integration
+def test_pipeline_failure_cannot_pass_qc_or_review(fixtures_dir, media_settings, tmp_path):
+    data = manifest_data(fixtures_dir / "sample-podcast.mp4", fixtures_dir / "sample.srt", tmp_path / "work")
+    data["steps"][1]["operation"] = "not_an_operation"
+    manifest = tmp_path / "failed.yaml"
+    manifest.write_text(yaml.safe_dump(data), encoding="utf-8")
+    result = run_pipeline(manifest, dry_run=False, resume=False, settings=media_settings)
+    assert result["status"] == "failed"
+    assert qc_state(result["state"], media_settings)["automated_pass"] is False
+    with pytest.raises(ClipkitError, match="Complete every"):
+        approve_run(result["state"], gate="human-qc", reviewer="test", notes="not a finished run")
+
+
+@pytest.mark.integration
+def test_pipeline_review_requires_current_qc(fixtures_dir, media_settings, tmp_path):
+    data = manifest_data(fixtures_dir / "sample-podcast.mp4", fixtures_dir / "sample.srt", tmp_path / "work")
+    data["steps"] = data["steps"][:1]
+    manifest = tmp_path / "one.yaml"
+    manifest.write_text(yaml.safe_dump(data), encoding="utf-8")
+    result = run_pipeline(manifest, dry_run=False, resume=False, settings=media_settings)
+    with pytest.raises(ClipkitError, match="Run clipkit qc"):
+        approve_run(result["state"], gate="human-qc", reviewer="test", notes="fixture")
+    qc = qc_state(result["state"], media_settings)
+    report = load_data(qc["report"])
+    report["outputs"][0]["sha256"] = "old-hash"
+    write_json(Path(qc["report"]), report)
+    with pytest.raises(ClipkitError, match="different output bytes"):
+        approve_run(result["state"], gate="human-qc", reviewer="test", notes="fixture")
+
+
+@pytest.mark.parametrize("field", ["id", "output"])
+def test_pipeline_rejects_duplicate_steps_before_writing(field, fixtures_dir, media_settings, tmp_path):
+    work = tmp_path / "never-created"
+    data = manifest_data(fixtures_dir / "sample-podcast.mp4", fixtures_dir / "sample.srt", work)
+    data["steps"][1][field] = data["steps"][0][field]
+    manifest = tmp_path / "duplicate.yaml"
+    manifest.write_text(yaml.safe_dump(data), encoding="utf-8")
+    with pytest.raises(ClipkitError, match="must be unique"):
+        run_pipeline(manifest, dry_run=False, resume=False, settings=media_settings)
+    assert not work.exists()
 
 
 def test_pipeline_dry_run_has_no_state(fixtures_dir: Path, media_settings, tmp_path: Path) -> None:

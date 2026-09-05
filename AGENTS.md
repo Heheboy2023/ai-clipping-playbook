@@ -4,7 +4,7 @@
 
 Maintain a deterministic, local, human-approved clipping pipeline. Prefer small,
 testable changes. The CLI and repository are the executable source of truth for
-commands that may later appear in *The AI Clipping Playbook*.
+commands taught in *Clip It & Cash In*.
 
 ## Required checks
 
@@ -33,4 +33,3 @@ commands that may later appear in *The AI Clipping Playbook*.
 - Safe defaults, stable JSON envelopes, useful nonzero exits, atomic final output.
 - No overwrite without `--overwrite`; no path escape from a declared root.
 - Update tests, docs, examples, and `REPOSITORY_MANIFEST.csv` with code changes.
-

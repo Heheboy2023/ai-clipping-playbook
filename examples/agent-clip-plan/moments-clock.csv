@@ -1,0 +1,4 @@
+id,source,start,end,checked
+C01,../fixtures/sample-podcast.mp4,00:00:00,00:00:02,yes
+C02,../fixtures/sample-podcast.mp4,00:00:02.500,00:00:05,yes
+C03,../fixtures/sample-podcast.mp4,00:00:05.500,00:00:07.800,yes

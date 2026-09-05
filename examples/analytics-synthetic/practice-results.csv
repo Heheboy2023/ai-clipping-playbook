@@ -1,0 +1,7 @@
+clip_id,format,length_seconds,observation_hours,views,average_watch_seconds,shares,saves,follows
+NOVA-01,story,30,72,4000,22,60,40,20
+NOVA-02,answer,30,72,3500,24,70,80,25
+NOVA-03,reaction,30,72,9000,12,25,10,8
+NOVA-04,story,30,72,4200,23,70,50,22
+NOVA-05,answer,30,72,3800,25,75,85,27
+NOVA-06,reaction,30,72,8500,13,30,15,10

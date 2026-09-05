@@ -7,7 +7,8 @@ Older releases may not receive backports.
 
 | Version | Supported |
 |---|---|
-| 0.1.x | Yes |
+| 0.2.x | Yes |
+| 0.1.x | Historical release; upgrade to 0.2.x for current fixes |
 | Earlier prereleases | No |
 
 Report a suspected vulnerability through GitHub's private vulnerability-reporting

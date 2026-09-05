@@ -30,12 +30,28 @@ Return one structured row per candidate and a separate uncertainty note.
 
 ## Expected output and verification
 
-Transfer the numeric fields into `templates/moment-scorecard.csv`, run
-`clipkit candidates score`, and compare the ranking with a human score. Record
-every override and its reason.
+This is the advanced ten-criterion worksheet. Chapter 4's simpler five-point
+sheet is `templates/moment-finder.csv`; it is not input for this command.
+
+Copy the scorecard to your work folder before filling it in. Enter `start` and
+`end` as seconds from the beginning of the source, not timecode strings. Keep
+the exact column names. Add a real summary and scores from 0 to 5. Set
+`rights_clear` to `true` only when your source use is settled; otherwise the
+tool leaves that row out of the eligible ranking. Use `disqualifier` for a
+specific reason a clip cannot work, such as a missing payoff.
+
+This runnable example scores the untouched template. Its placeholder is
+correctly excluded from the eligible list:
+
+```bash
+clipkit candidates score --input templates/moment-scorecard.csv --output work/scoring/template-result.csv
+```
+
+For your filled copy, replace the input path with its location. The default
+equal weights produce a total from 0 to 50, not a percentage and not a view
+forecast. Compare the order with your own judgment and note why you disagree.
 
 ## Limitations
 
 Weights are editorial heuristics. They need calibration for the audience and do
 not prove cause or predict platform performance.
-

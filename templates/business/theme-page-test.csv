@@ -1,0 +1,7 @@
+post_id,format,viewer_question,source_and_range,payoff,production_check,next_viewer_action,observation_window,result,next_change
+P01,mistake,,,,,,,,
+P02,fix,,,,,,,,
+P03,reaction,,,,,,,,
+P04,mistake,,,,,,,,
+P05,fix,,,,,,,,
+P06,reaction,,,,,,,,

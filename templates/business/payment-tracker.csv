@@ -1,0 +1,2 @@
+job_id,client_label,agreed_order_amount,approved_extra_amount,currency,invoiced_amount,received_amount,remaining_amount,direct_costs,payment_reference_label,next_action
+JOB01,,,,USD,,,,,,

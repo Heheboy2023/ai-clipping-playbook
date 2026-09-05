@@ -6,7 +6,7 @@ yt-dlp provides an official WinGet package:
 
 ```powershell
 winget install yt-dlp
-py -3.11 --version
+py -3 --version
 ffmpeg -version
 ffprobe -version
 yt-dlp --version
@@ -15,7 +15,7 @@ yt-dlp --version
 From the repository root:
 
 ```powershell
-py -3.11 -m venv .venv
+py -3 -m venv .venv
 .venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 python -m pip install -e ".[dev]"
@@ -24,7 +24,17 @@ clipkit doctor
 python -m pytest
 ```
 
-If PowerShell blocks activation, do not weaken machine-wide policy. You can call `.venv\Scripts\python.exe` and `.venv\Scripts\clipkit.exe` directly.
+Confirm Python is at least 3.11. If `py` is unavailable but `python` works, use `python --version` and `python -m venv .venv` instead.
+
+If PowerShell blocks activation, call the environment programs directly:
+
+```powershell
+.venv\Scripts\python.exe -m pip install --upgrade pip
+.venv\Scripts\python.exe -m pip install -e ".[dev]"
+.venv\Scripts\python.exe scripts\generate_fixtures.py
+.venv\Scripts\clipkit.exe doctor
+.venv\Scripts\python.exe -m pytest
+```
 
 Optional transcription:
 

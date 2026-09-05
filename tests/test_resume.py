@@ -34,3 +34,12 @@ def test_pipeline_resume_skips_completed_step(fixtures_dir: Path, media_settings
     run_pipeline(manifest, dry_run=False, resume=False, settings=media_settings)
     resumed = run_pipeline(manifest, dry_run=False, resume=True, settings=media_settings)
     assert resumed["steps"][0]["resumed"] is True
+    again = run_pipeline(manifest, dry_run=False, resume=True, settings=media_settings)
+    assert again["steps"][0]["resumed"] is True
+    data = yaml.safe_load(manifest.read_text())
+    data["steps"][0]["options"]["duration"] = 1
+    manifest.write_text(yaml.safe_dump(data), encoding="utf-8")
+    changed = run_pipeline(manifest, dry_run=False, resume=True, settings=media_settings)
+    assert changed["status"] == "failed"
+    assert changed["steps"][0].get("resumed") is not True
+    assert "exists" in changed["steps"][0]["error"]["message"].lower()

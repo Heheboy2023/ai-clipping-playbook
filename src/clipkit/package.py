@@ -35,6 +35,10 @@ def package_run(
             "Packaging is blocked until clipkit approve records human-qc approval.",
             kind="approval_required",
         )
+    if state.get("status") != "human_qc_approved" or any(
+        item.get("status") != "completed" for item in state.get("steps", [])
+    ):
+        raise ClipkitError("Packaging requires a complete, reviewed pipeline run.")
     if not SAFE_NAME.fullmatch(destination):
         raise ClipkitError("Destination must use lowercase letters, numbers, dots, dashes, or underscores.")
     steps = [
@@ -47,6 +51,11 @@ def package_run(
     source = Path(steps[-1]["output"]).expanduser().resolve()
     if not source.is_file():
         raise ClipkitError(f"Final run output is missing: {source}")
+    approval = next(item for item in state["approvals"]
+                    if item.get("gate") == "human-qc" and item.get("decision") == "approved")
+    expected = approval.get("output_hashes", {}).get(str(source))
+    if not expected or sha256_file(source) != expected:
+        raise ClipkitError("Final output changed after review; run QC and review again.")
 
     package_root = (
         Path(output_value).expanduser().resolve()
@@ -142,4 +151,3 @@ def audit_brand(path_value: str | Path) -> dict:
         "findings": findings,
         "note": "This mechanical audit does not judge design quality or brand rights.",
     }
-

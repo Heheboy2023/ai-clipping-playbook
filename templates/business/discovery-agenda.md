@@ -1,7 +1,11 @@
 # Discovery agenda
 
-1. Audience, business goal, and current evidence.
-2. Source inventory, ownership, guests, music, and usage permissions.
-3. Brand, editorial boundaries, approvals, and disclosures.
-4. Deliverables, destinations, cadence, review process, and success definitions.
-5. Access, security, records, payment, and unresolved decision owners.
+1. What should the clips help with, and who should watch them?
+2. How many source files and total source minutes are there?
+3. Does the client supply timestamps, or do you choose moments?
+4. Which sample style, clip count, and output formats fit?
+5. Who gives feedback, and when is the first batch needed?
+
+Finish by confirming the source cap, included work, review round, price,
+payment point, and preview deadline. Collect only the files/access needed
+for that agreed job. Keep complex added requests separate from the pilot.

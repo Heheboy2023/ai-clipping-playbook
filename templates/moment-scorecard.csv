@@ -1,2 +1,2 @@
-candidate_id,start,end,standalone_clarity,hook_strength,payoff,emotional_energy,audience_fit,context_risk,rights_confirmed,disqualifier,total_0_to_100,reviewer_notes
-C-001,00:00:00,00:00:30,0,0,0,0,0,0,false,,0,Score only from supplied evidence
+candidate_id,start,end,summary,clarity,standalone_value,audience_fit,tension,emotion,surprise,utility,payoff,source_integrity,visual_viability,rights_clear,disqualifier,reviewer_notes
+C-001,0,30,Replace this with the actual moment summary,0,0,0,0,0,0,0,0,0,0,false,,Score from the source; times are seconds

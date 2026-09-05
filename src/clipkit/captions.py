@@ -1,14 +1,15 @@
 from __future__ import annotations
 
 from pathlib import Path
+import math
 
 from .errors import ClipkitError
 from .io import load_data, output_path
 
 
 def _srt_time(value: float) -> str:
-    if value < 0:
-        raise ClipkitError("Caption timestamps cannot be negative.")
+    if not math.isfinite(value) or value < 0:
+        raise ClipkitError("Caption timestamps must be finite and nonnegative.")
     milliseconds = round(value * 1000)
     hours, remainder = divmod(milliseconds, 3_600_000)
     minutes, remainder = divmod(remainder, 60_000)
@@ -34,7 +35,7 @@ def validate_segments(data: object) -> list[dict]:
             text = str(segment["text"]).strip()
         except (KeyError, TypeError, ValueError) as exc:
             raise ClipkitError(f"Segment {index} has invalid start/end/text fields.") from exc
-        if start < 0 or end <= start or start < previous_start or not text:
+        if not math.isfinite(start) or not math.isfinite(end) or start < 0 or end <= start or start < previous_start or not text:
             raise ClipkitError(f"Segment {index} has invalid timing, order, or empty text.")
         previous_start = start
         validated.append(

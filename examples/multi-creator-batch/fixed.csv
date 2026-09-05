@@ -1,0 +1,6 @@
+job_id,operation,input,output,start,duration,mode,captions
+NOVA-01,cut,../fixtures/sample-podcast.mp4,../../work/multi-creator/nova/01-cut.mp4,0,2,,
+NOVA-02,cut,../fixtures/sample-podcast.mp4,../../work/multi-creator/nova/02-cut.mp4,2,2,,
+MIRA-01,cut,../fixtures/sample-gaming.mp4,../../work/multi-creator/mira/01-cut.mp4,0,2,,
+MIRA-02,cut,../fixtures/sample-gaming.mp4,../../work/multi-creator/mira/02-cut.mp4,2,2,,
+REED-01,cut,../fixtures/sample-livestream.mp4,../../work/multi-creator/reed/01-cut.mp4,0,2,,

@@ -1,5 +1,24 @@
 # Local verification manifest
 
+## Current reset-book pack — 0.2.0
+
+Internal verification: 2026-09-04. Book: *Clip It & Cash In*. This file records local test scope; the tagged GitHub release records publication.
+
+- Expanded automated suite: **97 passed in 36.19 seconds** on macOS, Python 3.12.11, FFmpeg/ffprobe 8.1.1. The preceding 93-test suite also passed after a fresh documented installation; four nonfinite-caption regression cases were then added and passed.
+- yt-dlp version/help: 2026.08.19. No live external-source retrieval was claimed.
+- Tested exact chapter command sheets, one-pass cutting/cropping/probing/decoding, setup diagnostics, cut and caption-retiming arithmetic, CSV templates, and weekly capacity math.
+- Tested cut planner, clock-time repair, missing-caption pipeline recovery, QC, stale-output detection, approval-state checks, and packaging.
+- Repaired raster-caption sizing, overflow handling, and nonfinite timestamp validation.
+- Repaired missing pip in the older environment; the fresh standard venv installation included pip normally.
+- 342 files mapped to current book chapters. Buyer source archives exclude private manuscript material, personal media, environments, and generated work.
+- Codex/Claude examples are locally tested reference implementations and prompt exercises, not claims of authenticated model conversations.
+- Windows installation remains documented, not clean-machine tested. Native FFmpeg subtitles depend on the build; the local raster fallback was tested.
+- The CLI does not upload, schedule, or publish media. The buyer resources are distributed through the tagged v0.2.0 GitHub release; manuscript and publishing-package files are not part of that repository.
+
+## Historical baseline — 0.1.0
+
+The record below describes the earlier release only. Its counts and tool versions are not the current reset-book verification.
+
 Verification date: 2026-09-03  
 Release state: public `v0.1.0` release candidate; URL verification is recorded in the parent book project's QA report  
 Host checked: macOS  

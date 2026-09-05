@@ -1,0 +1,30 @@
+CLIP ROOM — ORIGINAL FICTIONAL TEXT EXERCISE
+
+This is an authored transcript-style worksheet, not a real interview or a transcription of the test videos. Times are illustrative positions for practicing selection and interval checks. No recording accompanies this file. For real editing, replace it with a checked transcript of your source.
+
+[00:00–00:10] HOST: What was the first thing you stopped doing when you learned to edit clips?
+[00:10–00:42] EDITOR: Long intros. I spent an hour making an animated intro for a thirty-second clip. The actual story didn't start until eight seconds in. I watched it on my phone and wanted to skip my own video. So I removed the intro and opened with the mistake. Same recording. Same idea. Much faster start.
+[00:42–00:50] HOST: So the fix was taking something out, not adding another effect.
+
+[00:50–01:00] HOST: Does every reaction need a huge zoom?
+[01:00–01:35] EDITOR: No. In our practice stream, the player opened an empty-looking chest, turned away, then saw the rare item. If I started at the scream, nobody knew what happened. I kept the chest opening and the glance back. The reaction made sense without a zoom on every beat.
+[01:35–01:45] HOST: Keep the event that caused the reaction. Got it.
+
+[01:45–01:55] HOST: What changes when the clip teaches a game move?
+[01:55–02:30] EDITOR: I need the move on screen. A tight face crop can hide the only useful part. In the practice round, the player crossed a doorway too early and lost. I showed the doorway, then the player's explanation of waiting for the other team to reload. The game view carried the lesson. The face camera was smaller.
+[02:30–02:40] HOST: So a teaching clip needs room for what the viewer is learning.
+
+[02:40–02:50] HOST: What's one caption mistake you check first?
+[02:50–03:25] EDITOR: Numbers. An auto caption once changed our practice line from fifteen clips to fifty clips. The sentence still sounded normal when I read it. I caught it by listening. I keep a small list of names and terms next to the transcript, but the recording is how I settle an unclear word.
+[03:25–03:35] HOST: A clean-looking caption can still say the wrong thing.
+
+[03:35–03:45] HOST: How would you quote a first package?
+[03:45–04:20] EDITOR: I'd ask how much source video I need to watch. Three clips from three supplied timestamps is one job. Three clips found inside a four-hour stream is a different job. Before choosing a price, I'd time one test edit and include the search, captions, review, and messages. The source length belongs in the offer.
+[04:20–04:30] HOST: The clip count alone doesn't tell you how much work it is.
+
+[04:30–04:40] HOST: What about making a whole batch at once?
+[04:40–05:15] EDITOR: I'd export one clip first. In a practice batch, the crop looked fine for the host but cut off the guest when the speaker changed. Repeating it would only give me more files to repair. I fixed the layout, watched the export, then used that setup for the clips with the same shot.
+[05:15–05:25] HOST: Prove one version works, then repeat it.
+
+[05:25–05:35] HOST: What's the next move for a beginner?
+[05:35–05:55] EDITOR: Pick one clip from your own recording. Finish the cut and captions. Keep a note of what took the longest. That's the part to practice on the next one.

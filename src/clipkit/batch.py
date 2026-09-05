@@ -5,7 +5,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .errors import ClipkitError
-from .io import read_csv, write_json
+from .fingerprint import operation_fingerprint
+from .io import read_csv, sha256_file, write_json
 from .operations import resolve_relative, run_operation
 from .settings import Settings
 
@@ -47,6 +48,7 @@ def run_batch(
 
     prepared: list[dict] = []
     seen: set[str] = set()
+    outputs: set[Path] = set()
     for index, row in enumerate(rows, start=1):
         job_id = row.get("job_id", "").strip()
         operation = row.get("operation", "").strip()
@@ -57,10 +59,9 @@ def run_batch(
         seen.add(job_id)
         input_path = resolve_relative(base, row["input"])
         output_path = resolve_relative(base, row["output"])
-        old = previous.get(job_id)
-        if resume and old and old.get("status") == "completed" and output_path.is_file():
-            prepared.append({**old, "status": "skipped_completed"})
-            continue
+        if output_path in outputs:
+            raise ClipkitError(f"Batch rows share an output path: {output_path}")
+        outputs.add(output_path)
         prepared.append(
             {
                 "job_id": job_id,
@@ -72,10 +73,25 @@ def run_batch(
             }
         )
 
+    inputs = {Path(item["input"]) for item in prepared}
+    if inputs & outputs:
+        raise ClipkitError(
+            "Batch inputs and outputs must be separate. Use run for dependent steps."
+        )
+
     def execute(item: dict) -> dict:
-        if item["status"] == "skipped_completed":
-            return item
         try:
+            fingerprint = operation_fingerprint(item, settings)
+            old = previous.get(item["job_id"])
+            output = Path(item["output"])
+            if (
+                resume and old
+                and old.get("status") in {"completed", "skipped_completed"}
+                and old.get("fingerprint") == fingerprint
+                and output.is_file()
+                and old.get("output_hash") == sha256_file(output)
+            ):
+                return {**old, "status": "skipped_completed"}
             result = run_operation(
                 item["operation"],
                 input_path=Path(item["input"]),
@@ -85,7 +101,11 @@ def run_batch(
                 overwrite=False,
                 dry_run=dry_run,
             )
-            return {**item, "status": "planned" if dry_run else "completed", "result": result}
+            return {
+                **item, "status": "planned" if dry_run else "completed",
+                "result": result, "fingerprint": fingerprint,
+                "output_hash": sha256_file(output) if not dry_run else None,
+            }
         except ClipkitError as exc:
             return {
                 **item,
@@ -118,4 +138,3 @@ def run_batch(
         "completed": sum(item["status"] in {"completed", "skipped_completed"} for item in results),
         "results": results,
     }
-

@@ -1,0 +1,4 @@
+id,source,start,end,checked
+C01,../fixtures/sample-podcast.mp4,0,2,yes
+C02,../fixtures/sample-podcast.mp4,2.5,5,yes
+C03,../fixtures/sample-podcast.mp4,5.5,7.8,yes

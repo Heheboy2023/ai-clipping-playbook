@@ -1,6 +1,6 @@
 # Releases and book synchronization
 
-The current public release is `v0.1.0`. Tagged source archives and release notes are available from the [GitHub Releases page](https://github.com/Heheboy2023/ai-clipping-playbook/releases).
+Use [v0.2.0](https://github.com/Heheboy2023/ai-clipping-playbook/releases/tag/v0.2.0) with *Clip It & Cash In*. The v0.1.0 archive is retained for the former manuscript. Tagged source archives and release notes are available from the [GitHub Releases page](https://github.com/Heheboy2023/ai-clipping-playbook/releases); do not mistake the older archive for the new pack.
 
 Before each release:
 

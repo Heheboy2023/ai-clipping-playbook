@@ -1,0 +1,4 @@
+clip_id,source_file,start_clock,end_clock,start_seconds,end_seconds,duration_seconds,layout,output_filename,checked_against_media
+SOLO-01,replace-with-real-source,02:10,02:45,130,165,35,crop,solo__point__v01.mp4,false
+PANEL-01,replace-with-real-source,10:58,11:24,658,684,26,manual-two-person,panel__exchange__v01.mp4,false
+GAME-01,replace-with-real-source,01:03:48,01:04:20,3828,3860,32,manual-game-layout,game__move__v01.mp4,false

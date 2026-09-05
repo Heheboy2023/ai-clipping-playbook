@@ -57,15 +57,16 @@ def _font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
     try:
         return ImageFont.truetype("DejaVuSans.ttf", size=size)
     except OSError:
-        return ImageFont.load_default(size=max(10, size // 2))
+        return ImageFont.load_default(size=size)
 
 
 def render_card(text: str, path: Path, width: int, height: int) -> None:
-    font_size = max(18, round(width * 0.055))
+    font_size = max(10, round(width * 0.055))
     font = _font(font_size)
     max_chars = max(12, round(width / (font_size * 0.58)))
     lines = textwrap.wrap(text, width=max_chars, break_long_words=False) or [text]
-    lines = lines[:3]
+    if len(lines) > 3:
+        raise ClipkitError("Caption needs more than three lines. Split the cue into shorter timed phrases.")
     display = "\n".join(lines)
     image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
     draw = ImageDraw.Draw(image)
@@ -73,6 +74,8 @@ def render_card(text: str, path: Path, width: int, height: int) -> None:
     box = draw.multiline_textbbox((0, 0), display, font=font, spacing=spacing, align="center", stroke_width=max(1, font_size // 18))
     text_width = box[2] - box[0]
     text_height = box[3] - box[1]
+    if text_width > width * 0.92 or text_height > height * 0.40:
+        raise ClipkitError("Caption does not fit. Split the cue into shorter timed phrases.")
     pad_x = max(12, font_size // 2)
     pad_y = max(8, font_size // 3)
     x = (width - text_width) / 2
